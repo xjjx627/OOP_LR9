@@ -49,9 +49,10 @@ class Polynomial:
             a, b = a.next, b.next
         return not a and not b
 
-    def __str__(self):
+    def __str__(self): "deepseek для кравивого вывода"
         cur, s = self.head, []
         while cur:
             s.append(f"{cur.coeff}x^{cur.power}")
             cur = cur.next
         return " + ".join(s) if s else "0"
+
