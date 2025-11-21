@@ -1,0 +1,14 @@
+import random
+from main import Polynomial
+
+def random_poly(n=3):
+    p = Polynomial()
+    for i in range(n):
+        p.add_term(random.randint(1, 5), random.randint(0, 4))
+    return p
+
+a, b = random_poly(), random_poly()
+print("A =", a)
+print("B =", b)
+print("A + B =", a + b)
+print("A * B =", a * b)
