@@ -1,5 +1,3 @@
-import random
-
 class Polynomial:
     class Node:
         def __init__(self, coeff, power, next=None):
@@ -57,15 +55,3 @@ class Polynomial:
             s.append(f"{cur.coeff}x^{cur.power}")
             cur = cur.next
         return " + ".join(s) if s else "0"
-
-def random_poly(n=3):
-    p = Polynomial()
-    for i in range(n):
-        p.add_term(random.randint(1, 5), random.randint(0, 4))
-    return p
-
-a, b = random_poly(), random_poly()
-print("A =", a)
-print("B =", b)
-print("A + B =", a + b)
-print("A * B =", a * b)
